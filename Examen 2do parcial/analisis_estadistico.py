@@ -11,9 +11,7 @@ from matplotlib.patches import FancyBboxPatch
 import warnings
 warnings.filterwarnings('ignore')
 
-# ─────────────────────────────────────────────
 # 1. DATOS
-# ─────────────────────────────────────────────
 data = {
     'peso':      [7.2, 8.5, 9.8, 6.5, 7.5, 10.1, 11.0, 11.0, 11.1, 11.2,
                   11.3, 11.4, 11.4, 11.7, 12.0, 12.9, 12.9, 10.3,  9.7, 10.8,
@@ -279,6 +277,6 @@ plt.close()
 print("✓ Guardado: 05_media_mediana_moda.png")
 
 print("\n" + "="*60)
-print("  ✅ ANÁLISIS COMPLETO FINALIZADO")
+print("  ANÁLISIS COMPLETO FINALIZADO")
 print("  Archivos generados en /mnt/user-data/outputs/")
 print("="*60)
