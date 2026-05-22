@@ -11,7 +11,6 @@ from matplotlib.patches import FancyBboxPatch
 import warnings
 warnings.filterwarnings('ignore')
 
-# 1. DATOS
 data = {
     'peso':      [7.2, 8.5, 9.8, 6.5, 7.5, 10.1, 11.0, 11.0, 11.1, 11.2,
                   11.3, 11.4, 11.4, 11.7, 12.0, 12.9, 12.9, 10.3,  9.7, 10.8,
@@ -29,7 +28,6 @@ data = {
 }
 
 df = pd.DataFrame(data)
-# Limpiar color NA
 df['color'] = df['color'].replace('NA', np.nan)
 
 print("="*60)
@@ -39,9 +37,7 @@ print(f"\nTotal de registros: {len(df)}")
 print("\nPrimeras filas:")
 print(df.head())
 
-# ─────────────────────────────────────────────
-# 2. FRECUENCIAS ABSOLUTAS - todas las variables
-# ─────────────────────────────────────────────
+
 def frecuencias_absolutas(serie, nombre, bins=6):
     """Calcula frecuencias absolutas para variable numérica o categórica."""
     if serie.dtype == object or serie.name == 'color':
@@ -84,7 +80,6 @@ for var in variables_num:
     })
     print(tabla.to_string())
 
-# Color (categórica)
 s_color = df['color'].dropna()
 fa_color = s_color.value_counts().sort_index()
 fr_color = fa_color / fa_color.sum()
